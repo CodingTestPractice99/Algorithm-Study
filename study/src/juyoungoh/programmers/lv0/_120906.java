@@ -1,7 +1,5 @@
 package juyoungoh.programmers.lv0;
 
-import java.util.Arrays;
-
 public class _120906 {
 
     public static int solution(int n) {
