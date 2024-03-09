@@ -1,8 +1,23 @@
 package juyoungoh.programmers.lv0;
 
+import java.util.Arrays;
+
 public class _120889 {
 
-    // 3, 3, 5 || 5, 3, 3
+    // 남의 코드
+    public static int solution2(int[] slides) {
+        int answer = 0;
+        Arrays.sort(slides);
+
+        if (slides[2] < slides[0] + slides[1]) {
+            answer = 1;
+        } else {
+            answer = 2;
+        }
+        return answer;
+    }
+
+    // 삽질한 나의 코드
 
     public static int solution(int[] slides) {
         int maxLength = 0;
