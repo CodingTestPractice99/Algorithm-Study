@@ -1,7 +1,5 @@
 package juyoungoh.programmers.lv0;
 
-import java.util.Arrays;
-
 public class _120893 {
 
     public static String solution(String my_string) {
