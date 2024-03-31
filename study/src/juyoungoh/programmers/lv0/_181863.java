@@ -8,7 +8,6 @@ public class _181863 {
              return answer;
         } else {
             return rny_string;
-
         }
     }
 
