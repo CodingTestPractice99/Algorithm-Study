@@ -24,9 +24,21 @@ public class _120837 {
         return answer;
     }
 
+    public static int solution2(int hp) {
+        int answer = hp / 5;
+        hp %= 5;
+
+        answer += hp / 3;
+        hp %= 3;
+
+        answer += hp / 1;
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         // System.out.println(solution(23)); // 5
-        System.out.println(solution(24)); // 6
+        System.out.println(solution2(24)); // 6
         System.out.println(solution(999)); // 201
     }
 }
