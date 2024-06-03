@@ -3,7 +3,6 @@ package juyoungoh.programmers.lv0;
 public class _120838 {
 
     public static String solution(String letter) {
-        int count = 0;
         String morse[] = {
             ".-", "-...", "-.-.", "-..", ".", "..-.",
             "--.", "....", "..", ".---", "-.-", ".-..",
@@ -21,10 +20,8 @@ public class _120838 {
 
         for (int j = 0; j < str.length; j++) {
             for (int i = 0; i < morse.length; i++) {
-                if (str[count].equals(morse[i])) {
+                if (str[j].equals(morse[i])) {
                     answer += alphabet[i];
-                    count++;
-                    break;
                 }
             }
         }
