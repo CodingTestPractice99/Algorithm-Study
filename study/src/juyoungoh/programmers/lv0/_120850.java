@@ -1,28 +1,23 @@
 package juyoungoh.programmers.lv0;
 
+import java.util.Arrays;
+
 public class _120850 {
+
     public static int[] solution(String my_string) {
-        int count = 0;
-        int[] answer = {};
+        String arr[] = my_string.replaceAll("[^0-9]", "").split("");
+        int answer[] = new int[arr.length];
 
-        char array[] = my_string.toCharArray();
-
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(Integer.parseInt(String.valueOf(array[i])));
-
+        for (int i = 0; i < arr.length; i++) {
+            answer[i] += Integer.parseInt(arr[i]);
         }
-
-
-
-        for (int i = 0; i < my_string.length(); i++) {
-
-        }
+        Arrays.sort(answer);
         return answer;
     }
 
     public static void main(String[] args) {
-        System.out.println(solution("hi12392"));
-        System.out.println(solution("p2o4i8gj2"));
-        System.out.println(solution("abcde0"));
+        System.out.println(Arrays.toString(solution("hi12392")));
+        System.out.println(Arrays.toString(solution("p2o4i8gj2")));
+        System.out.println(Arrays.toString(solution("abcde0")));
     }
 }
