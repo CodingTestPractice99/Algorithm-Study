@@ -6,8 +6,9 @@ public class _120835_1 {
 
     public static int[] solution(int[] emergency) {
         int[] answer = new int[emergency.length];
-        for (int i = 0; i < emergency.length; i++) {
-            for (int j = 0; j < emergency.length; j++) {
+
+        for (int i = 0; i < emergency.length; i++) { // 0, 1, 2
+            for (int j = 0; j < emergency.length; j++) { // 0, 1, 2
                 if (emergency[i] <= emergency[j]) {
                     answer[i] += 1;
                 }
