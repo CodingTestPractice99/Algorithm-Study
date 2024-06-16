@@ -1,29 +1,38 @@
 package juyoungoh.beakjoon;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class _2439 {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-        
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.nextLine();
+        String strBlank = " ";
         String star = "*";
-        String blank = " ";
 
-        int n = Integer.parseInt(br.readLine()); // 5
-
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n - i; j++) {
-                sb.append(blank);
+        for (int i = 1; i <= n; i++) { // 1, 2, 3, 4, 5
+            /**
+             * 1. i = 1 -> 4, 3, 2, 1
+             * 2. i = 2 -> 4, 3, 2
+             * 3. i = 3 -> 4, 3
+             * 4. i = 4 -> 4
+             */
+            for (int j = n - 1; i <= j; j--) { // j = 4
+                System.out.print(strBlank);
             }
+            /**
+             * 1. i = 1 -> 1
+             * 2. i = 2 -> 1, 2
+             * 3. i = 3 -> 1, 2, 3
+             * 4. i = 4 -> 1, 2, 3, 4
+             * 5. i = 5 -> 1, 2, 3, 4, 5
+             */
             for (int k = 1; k <= i; k++) {
-                sb.append(star);
+                System.out.print(star);
             }
-            sb.append("\n");
+            System.out.println();
         }
-        System.out.print(sb);
     }
 }
+
