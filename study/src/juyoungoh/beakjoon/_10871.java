@@ -1,35 +1,29 @@
 package juyoungoh.beakjoon;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class _10871 {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
+        Scanner sc = new Scanner(System.in);
+
+        String strN[] = (sc.nextLine().split(" "));
+        int n = Integer.parseInt(strN[0]);
+        int n2 = Integer.parseInt(strN[1]);
+
+        int numbers[] = new int[n];
+
         StringBuilder sb = new StringBuilder();
-
-        st = new StringTokenizer(br.readLine(), " ");
-        int n = Integer.parseInt(st.nextToken());
-        int x = Integer.parseInt(st.nextToken());
-
-        int number[] = new int[n];
-
-        st = new StringTokenizer(br.readLine(), " ");
-
-        for (int i = 0; i < n; i++) { // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-            number[i] = Integer.parseInt(st.nextToken());
+        for (int i = 0; i < n; i++) {
+            numbers[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < n; i++) {
-            if (number[i] < x) {
-                sb.append(number[i] + " ");
+        for (int i = 0; i < numbers.length; i++) {
+            if (n2 > numbers[i]) {
+                sb.append(numbers[i] + " ");
             }
         }
         System.out.println(sb);
-        br.close();
     }
 }
