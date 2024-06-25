@@ -1,4 +1,4 @@
-package juyoungoh.programmers;
+package juyoungoh.programmers.lv1;
 
 public class _87389 {
     public static int solution(int n) {
