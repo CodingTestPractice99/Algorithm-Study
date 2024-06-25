@@ -26,7 +26,7 @@ public class _10809_1 {
         }
 
         for (int i : arr) {
-            System.out.println(i + " ");
+            System.out.print(i + " ");
         }
     }
 }
