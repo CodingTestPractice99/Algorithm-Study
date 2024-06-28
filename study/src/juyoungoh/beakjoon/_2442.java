@@ -8,29 +8,18 @@ public class _2442 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int n = Integer.parseInt(br.readLine());
-        String star = "*";
-        String blank = " ";
-        int count = 0;
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 1; i <= n; i++) { // 행 1, 2, 3, 4, 5
-            count = i + 2;
-            for (int j = n; j > i; j++) { // 4, 3, 2, 1
-                System.out.print(blank);
+            for (int j = n - 1; j >= i; j--) { // 4, 3, 2, 1
+                sb.append(" ");
             }
-            if (i == 1) {
-                System.out.print(star);
-            } else {
-                while (true) {
-                    if (count <= 0) {
-                        break;
-                    }
-                    System.out.print(star);
-                    count--;
-                }
+            for (int j = 1; j <= i * 2 - 1; j++) { // 1, 3, 5, 7, 9
+                sb.append("*");
             }
-            System.out.println();
+            sb.append("\n");
         }
+        System.out.print(sb);
     }
 }
