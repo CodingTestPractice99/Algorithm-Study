@@ -12,12 +12,11 @@ public class _2420 {
 
         String strArray[] = str.split(" ");
 
-        int a = Integer.parseInt(strArray[0]);
-        int b = Integer.parseInt(strArray[1]);
+        long a = Long.parseLong(strArray[0]);
+        long b = Long.parseLong(strArray[1]);
 
-        int a2 = Math.abs(a);
-        int b2 = Math.abs(b);
+        long c = Math.abs(a - b);
 
-        System.out.println(a2 + b2);
+        System.out.println(c);
     }
 }
