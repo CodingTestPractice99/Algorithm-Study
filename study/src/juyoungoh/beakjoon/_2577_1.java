@@ -3,6 +3,8 @@ package juyoungoh.beakjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -23,24 +25,28 @@ public class _2577_1 {
      */
     public static void main(String[] args) throws IOException {
         int sum = userInput();
-        Set<String> stringSet = numberCalculate(sum);
-        printNumber(stringSet);
+        Set<Integer> integerSet = numberCalculate(sum);
+        printNumber(integerSet);
     }
 
-    private static void printNumber(Set<String> stringSet) {
-        String result = String.join(", ", stringSet);
-        System.out.println(result);
+    private static void printNumber(Set<Integer> integerSet) {
+        List<String> list = new ArrayList<>();
+        for (Integer num : integerSet) {
+            list.add(String.valueOf(num));
+        }
+        String strJoin = String.join(", ", list);
+        System.out.println(strJoin);
     }
 
-    private static Set<String> numberCalculate(int sum) {
-        Set<String> stringSet = new TreeSet<>();
+    private static Set<Integer> numberCalculate(int sum) {
+        Set<Integer> integerSet = new TreeSet<>();
 
         while (sum >= 1) {
             int number = sum % 10;
-            stringSet.add(String.valueOf(number));
+            integerSet.add(number);
             sum /= 10;
         }
-        return stringSet;
+        return integerSet;
     }
 
     private static int userInput() throws IOException {
