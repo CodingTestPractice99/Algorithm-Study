@@ -11,7 +11,10 @@ public class _10757 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String num[] = br.readLine().split(" ");
 
-        BigInteger b = BigInteger.valueOf(Long.parseLong(num[1]));
+        BigInteger a = new BigInteger(num[0]);
+        BigInteger b = new BigInteger(num[1]);
 
+        BigInteger sum = a.add(b);
+        System.out.println(sum);
     }
 }
