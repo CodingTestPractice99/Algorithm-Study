@@ -14,7 +14,7 @@ public class _11365 {
             if (str.equals("END")) {
                 break;
             } else {
-                String reversed =new StringBuilder(str).reverse().toString();
+                String reversed = new StringBuilder(str).reverse().toString();
                 System.out.println(reversed);
             }
         }
