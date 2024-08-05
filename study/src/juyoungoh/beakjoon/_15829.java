@@ -22,7 +22,8 @@ public class _15829 {
             long V = alphabet[i] - 'a' + 1;
             long a2 = 1;
             for (int j = 0; j < i; j++) {
-                a2 = (r * a2) % mod;
+                a2 = (r * a2);
+                a2 %= mod;
             }
             long temp = V * a2 % mod;
             sum += temp % mod;
