@@ -3,41 +3,38 @@ package juyoungoh.beakjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Stack;
+import java.util.StringTokenizer;
 
 public class _17298 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        long n = Long.parseLong(br.readLine());
+        int n = Integer.parseInt(br.readLine());
+        Stack<Integer> stack = new Stack<>();
+        
+        int[] seq = new int[n];
 
-        if (n == 1) {
-            System.out.println(-1);
-            return;
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        for (int i = 0; i < n; i++) {
+            seq[i] = Integer.parseInt(st.nextToken());
         }
 
-        String str = br.readLine();
-        String arr[] = str.split(" ");
-
-        long num[] = new long[arr.length];
-
-        for (int i = 0; i < arr.length; i++) {
-            num[i] = Long.parseLong(arr[i]);
-        }
-
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < num.length; i++) {
-            for (int j = i + 1; j < num.length; j++) {
-                if (num[i] < num[j]) {
-                    sb.append(num[j]).append(" ");
-                    break;
-                } else if (num.length - 1 == j) {
-                    sb.append(-1).append(" ");
-                }
+        for (int i = 0; i < n; i++) {
+            while (!stack.isEmpty() && seq[stack.peek()] < seq[i]) {
+                seq[stack.pop()] = seq[i];
             }
+            stack.push(i);
         }
-
-        sb.append(-1);
-        System.out.print(sb);
+        while (!stack.isEmpty()) {
+            seq[stack.pop()] = -1;
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            sb.append(seq[i]).append(' ');
+        }
+        System.out.println(sb);
     }
 }
