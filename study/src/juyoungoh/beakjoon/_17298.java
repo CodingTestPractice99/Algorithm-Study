@@ -28,10 +28,13 @@ public class _17298 {
             }
             stack.push(i);
         }
+
         while (!stack.isEmpty()) {
             seq[stack.pop()] = -1;
         }
+
         StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < n; i++) {
             sb.append(seq[i]).append(' ');
         }
