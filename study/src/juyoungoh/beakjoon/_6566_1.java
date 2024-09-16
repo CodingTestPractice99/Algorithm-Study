@@ -77,7 +77,6 @@ public class _6566_1 {
             sb.append(" .\n");
             count++;
         }
-
         System.out.print(sb);
     }
 }
