@@ -36,7 +36,7 @@ public class _10825 {
             int compare4 = s1[0].compareTo(s2[0]);
 
             if (compare != 0) {
-               return compare;
+                return compare;
             }
             if (compare2 != 0) {
                 return compare2;
@@ -47,8 +47,8 @@ public class _10825 {
             if (compare4 != 0) {
                 return compare4;
             }
-        return compare;
-    });
+            return compare;
+        });
 
         for (int i = 0; i < list.size(); i++) {
             String str[] = list.get(i).split(" ");
