@@ -47,7 +47,7 @@ public class _6566_1 {
 
             int groupSize = 0;
             for (int count : wordCount.values()) {
-                groupSize += count;  // 그룹의 크기 계산 (중복 단어 포함)
+                 groupSize += count;  // 그룹의 크기 계산 (중복 단어 포함)
             }
 
             groups.add(new Group(groupWords, groupSize));  // Group 객체로 추가
