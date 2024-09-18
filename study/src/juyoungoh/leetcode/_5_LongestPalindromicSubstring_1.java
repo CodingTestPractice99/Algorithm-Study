@@ -1,6 +1,6 @@
 package juyoungoh.leetcode;
 
-public class _5_LongestPalindromicSubstring {
+public class _5_LongestPalindromicSubstring_1 {
 
     int left, maxLen;
 
@@ -21,7 +21,6 @@ public class _5_LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
         // 문자 길이 저장
         int len = s.length();
-
         // 길이가 1인 경우 예외 처리
         if (len < 2) {
             return s;
@@ -29,8 +28,8 @@ public class _5_LongestPalindromicSubstring {
 
         // 우측으로 한 칸씩 이동하며 투 포인터 조사
         for (int i = 0; i < len - 1; i++) {
-            extendPalindrome(s, i, i + 1); // 2칸짜리 투 포인터
-            extendPalindrome(s, i, i + 2); // 3칸짜리 투 포인터
+            extendPalindrome(s, i, i + 1);
+            extendPalindrome(s, i, i + 2);
         }
         // 왼쪽과 최대 길이만큼을 더한 오른쪽만큼의 문자를 정답으로 리턴
         return s.substring(left, left + maxLen);
@@ -38,7 +37,11 @@ public class _5_LongestPalindromicSubstring {
 
 
     public static void main(String[] args) {
-        _5_LongestPalindromicSubstring o = new _5_LongestPalindromicSubstring();
+        _5_LongestPalindromicSubstring_1 n = new _5_LongestPalindromicSubstring_1();
+        System.out.println(n.longestPalindrome("dcbabcdd"));
+        _5_LongestPalindromicSubstring_1 m = new _5_LongestPalindromicSubstring_1();
+        System.out.println(m.longestPalindrome("babad"));
+        _5_LongestPalindromicSubstring_1 o = new _5_LongestPalindromicSubstring_1();
         System.out.println(o.longestPalindrome("cbbd"));
     }
 }
