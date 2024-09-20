@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class _11652 {
+public class _11652_1 {
 
     static class Word {
 
@@ -22,26 +22,26 @@ public class _11652 {
         }
     }
 
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        List<Word> list = new ArrayList<>();
+
+        // 첫 번째 줄에서 카드의 개수 N을 입력받는다.
+        int N = Integer.parseInt(br.readLine());
+
         Map<Long, Integer> map = new HashMap<>();
 
-        while (true) {
-            String str = br.readLine();
-            if (str == null || str.isEmpty()) { // 먼저 null 체크 후 empty 체크
-                break;
-            } else {
-                Long l = Long.parseLong(str);
-                map.put(l, map.getOrDefault(l, 0) + 1);  // 숫자의 빈도를 카운트
-            }
+        // N개의 숫자 카드 입력 처리
+        for (int i = 0; i < N; i++) {
+            Long l = Long.parseLong(br.readLine());
+            map.put(l, map.getOrDefault(l, 0) + 1);  // 숫자의 빈도를 카운트
         }
 
+        List<Word> list = new ArrayList<>();
         for (Long key : map.keySet()) {
             list.add(new Word(key, map.get(key)));
         }
 
+        // 빈도 순으로 내림차순, 숫자 순으로 오름차순 정렬
         Collections.sort(list, (o1, o2) -> {
             int compare = Integer.compare(o2.count, o1.count);
             if (compare == 0) {
@@ -50,7 +50,7 @@ public class _11652 {
             return compare;
         });
 
+        // 가장 많이 나온 숫자를 출력
         System.out.print(list.get(0).number);
     }
 }
-
