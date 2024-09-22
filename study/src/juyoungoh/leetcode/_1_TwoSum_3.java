@@ -2,7 +2,7 @@ package juyoungoh.leetcode;
 
 import java.util.Arrays;
 
-public class _1_TowSum_3 {
+public class _1_TwoSum_3 {
 
     public static int[] twoSum(int[] nums, int target) {
         int left = 0;

@@ -1,6 +1,6 @@
 package juyoungoh.leetcode;
 
-public class _1_TowSum {
+public class _1_TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
         // 입력값 배열을 처음부터 순회
