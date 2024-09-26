@@ -42,11 +42,11 @@ public class _234_PalindromeLinkedList_2 {
         _234_PalindromeLinkedList_2 palindromeChecker = new _234_PalindromeLinkedList_2();
 
         // 숫자 12321을 연결 리스트로 변환
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(2);
-        head.next.next.next.next = new ListNode(1);
+        ListNode head = new ListNode(1); // x001
+        head.next = new ListNode(2); // x002
+        head.next.next = new ListNode(3); // x003
+        head.next.next.next = new ListNode(2); // x004
+        head.next.next.next.next = new ListNode(1); //x005
 
         // 회문 확인
         System.out.println("Is 12321 a palindrome? " + palindromeChecker.isPalindrome(head)); // true
