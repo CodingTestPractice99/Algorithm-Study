@@ -20,6 +20,6 @@ public class _1_TwoSum_2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(twoSum(new int[]{10, 6, 15, 2}, 8)));
+        System.out.println(Arrays.toString(twoSum(new int[]{2, 6, 15, 11}, 8)));
     }
 }
