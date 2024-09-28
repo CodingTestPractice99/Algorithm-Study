@@ -1,5 +1,9 @@
 package juyoungoh.leetcode;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class _5_LongestPalindromicSubstring {
 
     int left, maxLen;
@@ -18,13 +22,13 @@ public class _5_LongestPalindromicSubstring {
         }
     }
 
-    public String longestPalindrome(String s) {
+    public int longestPalindrome(String s) {
         // 문자 길이 저장
         int len = s.length();
 
         // 길이가 1인 경우 예외 처리
         if (len < 2) {
-            return s;
+            return s.length();
         }
 
         // 우측으로 한 칸씩 이동하며 투 포인터 조사
@@ -33,12 +37,14 @@ public class _5_LongestPalindromicSubstring {
             extendPalindrome(s, i, i + 2); // 3칸짜리 투 포인터
         }
         // 왼쪽과 최대 길이만큼을 더한 오른쪽만큼의 문자를 정답으로 리턴
-        return s.substring(left, left + maxLen);
+        return s.substring(left, left + maxLen).length();
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
         _5_LongestPalindromicSubstring o = new _5_LongestPalindromicSubstring();
-        System.out.println(o.longestPalindrome("cbbd"));
+        System.out.println(o.longestPalindrome(str));
     }
 }
