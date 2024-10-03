@@ -5,6 +5,17 @@ import juyoungoh.leetcode._21_MergeTwoSortedLists.ListNode;
 
 public class _2_AddTwoNumbers {
 
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        // 2개의 연결 리스트를 뒤집는다.
+        ListNode l1Reversed = reverseList(l1);
+        ListNode l2Reversed = reverseList(l2);
+
+        // 임의 정밀도 정수형으로 변환하여 더하기 연산 진행
+        BigInteger result = toBigInt(l1Reversed).add(toBigInt(l2Reversed));
+        // 결과를 다시 역순 연결 리스트로 변환
+        return toReversedLinkedList(result);
+    }
+
     public ListNode reverseList(ListNode head) {
         ListNode prev = null, node = head;
         // 노드 끝으로 이동할 때까지 순회
@@ -47,16 +58,5 @@ public class _2_AddTwoNumbers {
             prev = node;
         }
         return node;
-    }
-
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        // 2개의 연결 리스트를 뒤집는다.
-        ListNode l1Reversed = reverseList(l1);
-        ListNode l2Reversed = reverseList(l2);
-
-        // 임의 정밀도 정수형으로 변환하여 더하기 연산 진행
-        BigInteger result = toBigInt(l1Reversed).add(toBigInt(l2Reversed));
-        // 결과를 다시 역순 연결 리스트로 변환
-        return toReversedLinkedList(result);
     }
 }
