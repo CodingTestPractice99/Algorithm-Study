@@ -1,7 +1,5 @@
 package juyoungoh.leetcode;
 
-import juyoungoh.leetcode._21_MergeTwoSortedLists.ListNode;
-
 public class _2_AddTwoNumbers_1 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -37,5 +35,45 @@ public class _2_AddTwoNumbers_1 {
         }
         // 첫 번째 노드는 임시 노드이므로 그 다음부터 결과로 리턴
         return root.next;
+    }
+
+    // ListNode 클래스 정의
+    public static class ListNode {
+
+        int val;
+        ListNode next;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+    // main 메소드 추가
+    public static void main(String[] args) {
+        // list1 2 -> 4 -> 3
+        ListNode list1 = new ListNode(2);
+        list1.next = new ListNode(4);
+        list1.next.next = new ListNode(3);
+
+        // list2 5 -> 6 -> 2
+        ListNode list2 = new ListNode(5);
+        list2.next = new ListNode(6);
+        list2.next.next = new ListNode(2);
+
+        // _2_AddTwoNumbers_1 클래스 인스턴스 생성
+        _2_AddTwoNumbers_1 solution = new _2_AddTwoNumbers_1();
+
+        // 두 리스트의 합산 결과
+        ListNode result = solution.addTwoNumbers(list1, list2);
+
+        // 결과 출력
+        System.out.print("Result: ");
+        while (result != null) {
+            System.out.print(result.val);
+            if (result.next != null) {
+                System.out.print(" -> ");
+            }
+            result = result.next;
+        }
     }
 }
