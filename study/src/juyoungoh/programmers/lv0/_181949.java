@@ -9,15 +9,11 @@ public class _181949 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String str = br.readLine();
+        String str[] = br.readLine().split("");
         String answer = "";
-        char c[] = str.toCharArray();
 
-
-        for (int i = 0; i < c.length; i++) {
-           if (c[i] > 90) {
-
-           }
+        for (int i = 0; i < str.length; i++) {
+            
         }
     }
 
