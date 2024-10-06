@@ -27,8 +27,9 @@ public class _9012 {
             for (int j = 0; j < arr.length; j++) {
                 if (!map.containsKey(arr[j])) {
                     stack.push(arr[j]);
-                } else if (stack.isEmpty() || map.get(arr[j]) != stack.pop()) {
+                } else if (stack.isEmpty() || !(map.get(arr[j]).equals(stack.pop()))) {
                     isValid = false;
+                    break;
                 }
             }
             if (isValid && stack.isEmpty()) {
