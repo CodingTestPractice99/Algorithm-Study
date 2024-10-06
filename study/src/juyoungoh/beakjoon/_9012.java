@@ -17,30 +17,25 @@ public class _9012 {
         }};
 
         int t = Integer.parseInt(br.readLine());
-        Deque<String> stack = new ArrayDeque<>();
-        int count = 0;
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < t; i++) {
             String arr[] = br.readLine().split("");
+            Deque<String> stack = new ArrayDeque<>();
+            boolean isValid = true;
+
             for (int j = 0; j < arr.length; j++) {
                 if (!map.containsKey(arr[j])) {
                     stack.push(arr[j]);
                 } else if (stack.isEmpty() || map.get(arr[j]) != stack.pop()) {
-                    sb.append("NO").append("\n");
-                    count++;
-                    stack.clear();
-                    break;
+                    isValid = false;
                 }
             }
-            if (stack.size() == 0 && count <= i) {
-                count++;
+            if (isValid && stack.isEmpty()) {
                 sb.append("YES").append("\n");
-            } else if (count < i) {
-                count++;
+            } else {
                 sb.append("NO").append("\n");
             }
-            stack.clear();
         }
         System.out.print(sb);
     }
