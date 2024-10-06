@@ -38,7 +38,7 @@ public class _20_ValidParentheses {
     public static void main(String[] args) {
         _20_ValidParentheses validator = new _20_ValidParentheses();
 
-        String test1 = "[]{}()";
+        String test1 = "()()()()(()()())()";
         String test2 = "[{]}";
         String test3 = "([{}])";
         String test4 = "(";
