@@ -42,6 +42,8 @@ public class _20_ValidParentheses {
         String test2 = "[{]}";
         String test3 = "([{}])";
         String test4 = "(";
+        String test5 = "(";
+        String test6 = "())"; // 중간에 스택이 비게 되는 테스트
 
         System.out.println("Test 1: " + validator.isValid(test1)); // true
         System.out.println("Test 2: " + validator.isValid(test2)); // false
