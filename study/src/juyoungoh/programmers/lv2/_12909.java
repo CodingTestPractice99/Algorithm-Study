@@ -3,41 +3,28 @@ package juyoungoh.programmers.lv2;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Queue;
+import java.util.HashMap;
+import java.util.Map;
 
 public class _12909 {
 
-    public static boolean solution2(String s) {
-        String str = s;
-        char c[] = str.toCharArray();
-        String s1 = String.valueOf(c[0]);
-        String s2 = String.valueOf(c[c.length - 1]);
-
-        if (s1.equals("(") && s2.equals(")")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     public static boolean solution(String s) {
-        String str = s;
-        if (s.charAt(0) == ')') {
-            return false;
-        }
+        Map<String, String> map = new HashMap<>() {{
+            put(")", "(");
+        }};
 
-        char c[] = str.toCharArray();
+        Deque<String> stack = new ArrayDeque<>();
 
-        Deque<String> strings = new ArrayDeque<>();
-        for (int i = 0; i < c.length; i++) {
-            strings.add(String.valueOf(c[i]));
+        String[] split = s.split("");
+        for (int j = 0; j < split.length; j++) {
+            if (!map.containsKey(split[j])) {
+                stack.push(split[j]);
+            } else if (stack.isEmpty() || !(map.get(split[j]).equals(stack.pop()))) {
+                return false;
+            }
         }
-
-        if (strings.getFirst().equals("(") && strings.getLast().equals(")")) {
-            return true;
-        } else {
-            return false;
-        }
+        return stack.size() == 0;
     }
 
     public static void main(String[] args) {
