@@ -31,4 +31,32 @@ public class _225_ImplementStackUsingQueues {
         // 크기를 비교해 비어 있는지 확인
         return queue.size() == 0;
     }
+
+    public static void main(String[] args) {
+        _225_ImplementStackUsingQueues stack = new _225_ImplementStackUsingQueues();
+
+        // 스택에 엘리먼트 삽입
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        // 최상단 엘리먼트 출력
+        System.out.println("Top element: " + stack.top());  // 3
+
+        // 최상단 엘리먼트 제거
+        System.out.println("Popped element: " + stack.pop());  // 3
+
+        // 최상단 엘리먼트 출력
+        System.out.println("Top element: " + stack.top());  // 2
+
+        // 스택이 비어있는지 확인
+        System.out.println("Is stack empty? " + stack.empty());  // false
+
+        // 모든 엘리먼트 제거
+        stack.pop();
+        stack.pop();
+
+        // 스택이 비어있는지 다시 확인
+        System.out.println("Is stack empty? " + stack.empty());  // true
+    }
 }
