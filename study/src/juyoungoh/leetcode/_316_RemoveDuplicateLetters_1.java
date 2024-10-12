@@ -44,4 +44,14 @@ public class _316_RemoveDuplicateLetters_1 {
         }
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        _316_RemoveDuplicateLetters_1 solution = new _316_RemoveDuplicateLetters_1();
+
+        String input = "dbacdcbc";
+        String result = solution.removeDuplicateLetters(input);
+
+        System.out.println("Input: " + input);
+        System.out.println("Output: " + result);
+    }
 }
