@@ -49,7 +49,7 @@ public class _316_RemoveDuplicateLetters {
 
     public static void main(String[] args) {
         _316_RemoveDuplicateLetters solution = new _316_RemoveDuplicateLetters();
-        String input = "bcabc";
+        String input = "dbacdcbc";
         String result = solution.removeDuplicateLetters(input);
         System.out.println("Result: " + result);
     }
