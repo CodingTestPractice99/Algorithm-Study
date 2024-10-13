@@ -24,7 +24,7 @@ public class _2493 {
 
         // 스택을 이용하여 각 탑이 신호를 수신할 탑을 찾음
         for (int i = 0; i < n; i++) {
-            while (!stack.isEmpty() && number[stack.peek()] < number[i]) {
+            while (!stack.isEmpty() && number[i] > number[stack.peek()]) {
                 stack.pop();
             }
             if (!stack.isEmpty()) {
