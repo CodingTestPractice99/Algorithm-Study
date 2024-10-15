@@ -43,7 +43,6 @@ public class _2910 {
                 sb.append(number).append(" ");
             }
         }
-
         System.out.print(sb.toString().trim());
     }
 }
