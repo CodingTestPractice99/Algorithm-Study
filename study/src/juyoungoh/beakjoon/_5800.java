@@ -24,10 +24,9 @@ public class _5800 {
             Arrays.sort(class1);
 
             int max = 0;
-            for (int j = 1; j < class1.length; j++) {
-                int gap = class1[j] - class1[j - 1];
-                if (gap > max) {
-                    max = gap;
+            for (int j = class1.length - 1; j >= 0; j--) {
+                if ((j > 0) && ((class1[j] - class1[j - 1]) > max)) {
+                    max = class1[j] - class1[j - 1];
                 }
             }
             System.out.println("Class " + (i));
