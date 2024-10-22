@@ -49,7 +49,6 @@ public class _23_MergeKSortedLists {
                 pq.add(tail.next);
             }
         }
-
         return root.next;
     }
 
