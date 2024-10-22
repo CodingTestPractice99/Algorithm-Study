@@ -3,7 +3,6 @@ package juyoungoh.programmers.lv2;
 import java.util.PriorityQueue;
 
 public class _42626_1 {
-
     public int solution(int[] scoville, int K) {
         int answer = 0;
         PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
