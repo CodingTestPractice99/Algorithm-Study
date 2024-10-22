@@ -1,5 +1,6 @@
 package juyoungoh.leetcode;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -36,5 +37,18 @@ public class _973_KClosestPointsToOrigin {
             results[i] = pq.poll().point;
         }
         return results;
+    }
+
+    public static void main(String[] args) {
+        // 입력값 설정
+        int[][] points = {{3, 3}, {6, -1}, {-2, 4}};
+        int k = 2;
+
+        // _973_KClosestPointsToOrigin 클래스의 kClosest 메소드 호출
+        _973_KClosestPointsToOrigin solution = new _973_KClosestPointsToOrigin();
+        int[][] result = solution.kClosest(points, k);
+
+        // 결과 출력
+        System.out.println("K Closest Points to Origin: " + Arrays.deepToString(result));
     }
 }
