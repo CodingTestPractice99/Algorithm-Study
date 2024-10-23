@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 public class _42626_1 {
     public int solution(int[] scoville, int K) {
         int answer = 0;
-        PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
+        PriorityQueue<Integer> heap = new PriorityQueue<>();
 
         for (int aScoville : scoville) {
             heap.add(aScoville);
