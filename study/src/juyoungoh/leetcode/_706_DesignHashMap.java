@@ -102,5 +102,27 @@ public class _706_DesignHashMap {
             node = node.next;
         }
     }
+
+    public static void main(String[] args) {
+        _706_DesignHashMap hashMap = new _706_DesignHashMap();
+
+        // 삽입
+        hashMap.put(1, 10);
+        hashMap.put(2, 20);
+        hashMap.put(3, 30);
+
+        // 조회
+        System.out.println("Get key 1: " + hashMap.get(1)); // 출력: 10
+        System.out.println("Get key 2: " + hashMap.get(2)); // 출력: 20
+        System.out.println("Get key 3: " + hashMap.get(3)); // 출력: 30
+
+        // 업데이트
+        hashMap.put(2, 25);
+        System.out.println("Updated key 2: " + hashMap.get(2)); // 출력: 25
+
+        // 삭제
+        hashMap.remove(2);
+        System.out.println("Get key 2 after removal: " + hashMap.get(2)); // 출력: -1
+    }
 }
 
