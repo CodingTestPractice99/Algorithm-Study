@@ -30,10 +30,10 @@ public class _20949 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int n = Integer.parseInt(br.readLine());
 
         List<Monitor> list = new ArrayList<>();
+
         for (int i = 1; i <= n; i++) {
             String str = br.readLine();
             String[] s = str.split(" ");
