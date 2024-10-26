@@ -29,4 +29,12 @@ public class _771_JewelsAndStones {
         }
         return count;
     }
+
+    public static void main(String[] args) {
+        _771_JewelsAndStones solution = new _771_JewelsAndStones();
+        String J = "aA";
+        String S = "aAAbbbb";
+        int result = solution.numJewelsInStones(J, S);
+        System.out.println("Number of jewels in stones: " + result);
+    }
 }
