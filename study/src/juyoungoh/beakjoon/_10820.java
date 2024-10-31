@@ -8,7 +8,6 @@ public class _10820 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int lowerCase = 0;
         int upperCase = 0;
         int num = 0;
