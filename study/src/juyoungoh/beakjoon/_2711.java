@@ -24,7 +24,6 @@ public class _2711 {
 
             for (int j = 0; j < c.length; j++) {
                 if (j == n - 1) {
-                    continue;
                 } else {
                     arr[index] = String.valueOf(c[j]);
                     index++;
