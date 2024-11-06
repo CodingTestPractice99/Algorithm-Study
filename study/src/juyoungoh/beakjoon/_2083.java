@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 
 public class _2083 {
 
-    // 나이가 17세보다 많거나, 몸무게가 80kg 이상이면 성인부이다.
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
