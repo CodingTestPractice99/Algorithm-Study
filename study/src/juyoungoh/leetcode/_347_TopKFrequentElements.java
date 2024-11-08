@@ -8,7 +8,7 @@ import java.util.Map;
 public class _347_TopKFrequentElements {
 
     public static void main(String[] args) {
-        topKFrequent(new int[]{1, 1, 1, 2, 2, 3, 4}, 2);
+        topKFrequent(new int[]{1, 1, 1, 2, 2, 3, 4}, 4);
     }
 
     public static int[] topKFrequent(int[] nums, int k) {
@@ -49,5 +49,4 @@ public class _347_TopKFrequentElements {
         }
         return result;
     }
-
 }
