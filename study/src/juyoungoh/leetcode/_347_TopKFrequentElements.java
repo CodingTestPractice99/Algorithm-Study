@@ -7,7 +7,11 @@ import java.util.Map;
 
 public class _347_TopKFrequentElements {
 
-    public int[] topKFrequent(int[] nums, int k) {
+    public static void main(String[] args) {
+        topKFrequent(new int[]{1, 1, 1, 2, 2, 3, 4}, 2);
+    }
+
+    public static int[] topKFrequent(int[] nums, int k) {
         // 각 엘리먼트의 빈도수를 저장할 해시맵 선언, 엘리먼트 => 빈도수
         Map<Integer, Integer> frequencyMap = new HashMap<>();
         // 각 엘리먼트의 빈도수를 반복하며 계산하여 저장
