@@ -20,7 +20,7 @@ public class _347_TopKFrequentElements_2 {
         }
 
         // 빈도순으로 정렬되는 우선순위 큐 선언
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[1] - a[1]));
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[1] - a[1]);
         // 우선순위 큐에 각 엘리먼트와 빈도수 삽입
         for (int elem : frequencyMap.keySet()) {
             pq.add(new int[]{elem, frequencyMap.get(elem)});
