@@ -25,7 +25,7 @@ public class _42576 {
     }
 
     public static void main(String[] args) {
-        System.out.println(solution(new String[]{"marina", "josipa", "nikola", "vinko", "filipa"},
-            new String[]{"josipa", "filipa", "marina", "nikola"}));
+        System.out.println(solution(new String[]{"marina", "josipa", "nikola", "vinko", "filipa", "marina"},
+            new String[]{"josipa", "filipa", "marina", "nikola", "vinko"}));
     }
 }
