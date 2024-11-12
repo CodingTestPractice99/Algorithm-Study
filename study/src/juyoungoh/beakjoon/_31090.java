@@ -8,7 +8,6 @@ public class _31090 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int n = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < n; i++) {
@@ -18,7 +17,6 @@ public class _31090 {
             String s2 = str[2] + str[3];
             int n2 = Integer.parseInt(s2);
             int m = (sNum + 1) % n2;
-
             if (m == 0) {
                 System.out.println("Good");
             } else {
