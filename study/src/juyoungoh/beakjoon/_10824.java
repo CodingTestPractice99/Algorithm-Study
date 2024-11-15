@@ -14,8 +14,8 @@ public class _10824 {
         String a = arr[0] + arr[1];
         String b = arr[2] + arr[3];
 
-        int aNum = Integer.parseInt(a);
-        int bNum = Integer.parseInt(b);
+        long aNum = Long.parseLong(a);
+        long bNum = Long.parseLong(b);
 
         System.out.println(aNum + bNum);
     }
