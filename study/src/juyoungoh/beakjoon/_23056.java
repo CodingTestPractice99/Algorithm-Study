@@ -64,13 +64,24 @@ public class _23056 {
         Collections.sort(list1, (o1, o2) -> {
             String s1[] = o1.split(" ");
             String s2[] = o2.split(" ");
-            return Integer.compare(s1[1].length(), s2[1].length());
+            int compare = Integer.compare(Integer.parseInt(s1[0]), Integer.parseInt(s2[0]));
+
+            if (compare == 0) {
+                return Integer.compare(s1[1].length(), s2[1].length());
+            }
+
+            return compare;
         });
 
         Collections.sort(list2, (o1, o2) -> {
             String s1[] = o1.split(" ");
             String s2[] = o2.split(" ");
-            return Integer.compare(s1[1].length(), s2[1].length());
+            int compare = Integer.compare(Integer.parseInt(s1[0]), Integer.parseInt(s2[0]));
+
+            if (compare == 0) {
+                return Integer.compare(s1[1].length(), s2[1].length());
+            }
+            return compare;
         });
 
         StringBuilder sb = new StringBuilder();
