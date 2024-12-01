@@ -13,8 +13,8 @@ public class _7891 {
 
         for (int i = 0; i < n; i++) {
             String str[] = br.readLine().split(" ");
-            int n2 = Integer.parseInt(str[0]);
-            int m2 = Integer.parseInt(str[1]);
+            long n2 = Long.parseLong(str[0]);
+            long m2 = Long.parseLong(str[1]);
 
             System.out.println(n2 + m2);
         }
