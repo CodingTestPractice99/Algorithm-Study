@@ -13,6 +13,7 @@ public class _26040 {
         String arr[] = br.readLine().split(" ");
 
         String string = "";
+
         for (int i = 0; i < arr.length; i++) {
             string += arr[i];
         }
