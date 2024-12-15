@@ -34,4 +34,10 @@ public class _77_Combinations {
 
         return results;
     }
+
+    public static void main(String[] args) {
+        _77_Combinations combinations = new _77_Combinations();
+        List<List<Integer>> combine = combinations.combine(5, 3);
+        System.out.println(combine);
+    }
 }
