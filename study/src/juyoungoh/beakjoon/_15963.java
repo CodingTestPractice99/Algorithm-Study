@@ -20,5 +20,4 @@ public class _15963 {
             System.out.println(0);
         }
     }
-
 }
