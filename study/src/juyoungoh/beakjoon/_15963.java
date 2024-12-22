@@ -11,8 +11,8 @@ public class _15963 {
 
         String arr[] = br.readLine().split(" ");
 
-        int n = Integer.parseInt(arr[0]);
-        int m = Integer.parseInt(arr[1]);
+        long n = Long.parseLong(arr[0]);
+        long m = Long.parseLong(arr[1]);
 
         if (n == m) {
             System.out.println(1);
