@@ -19,5 +19,4 @@ public class _15232 {
             System.out.println();
         }
     }
-
 }
