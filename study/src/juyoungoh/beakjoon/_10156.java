@@ -8,7 +8,6 @@ public class _10156 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         String arr[] = br.readLine().split(" ");
 
         int a = Integer.parseInt(arr[0]);
