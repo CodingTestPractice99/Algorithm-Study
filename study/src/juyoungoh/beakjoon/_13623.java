@@ -13,7 +13,6 @@ public class _13623 {
         
         if (s[0].equals(s[1]) && s[1].equals(s[2])) {
             System.out.println("*");
-            return;
         } else if (s[0].equals(s[1])) {
             System.out.println("C");
         } else if (s[1].equals(s[2])) {
