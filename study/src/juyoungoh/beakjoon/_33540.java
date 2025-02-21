@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +27,7 @@ public class _33540 {
 
         List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
 
-        list.sort(Comparator.comparing(Map.Entry::getKey));
+        list.sort(Entry.comparingByKey());
 
         for (Entry<String, Integer> entry : list) {
             System.out.println(entry.getKey() + " " + entry.getValue());
