@@ -21,7 +21,5 @@ public class _30224 {
         } else if ((n.contains("7") && n2 % 7 == 0)) {
             System.out.println(3);
         }
-
-
     }
 }
