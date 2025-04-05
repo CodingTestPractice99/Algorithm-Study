@@ -8,7 +8,6 @@ public class _17388 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         String s[] = br.readLine().split(" ");
 
         int sum = 0;
