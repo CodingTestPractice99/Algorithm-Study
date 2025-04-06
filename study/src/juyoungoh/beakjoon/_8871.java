@@ -10,8 +10,9 @@ public class _8871 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
-        int min = 2 + (3 * n);
-        int max = 3 + (3 * n);
+        int totalRounds = n + 1;
+        int min = 2 * totalRounds;
+        int max = 3 * totalRounds;
 
         System.out.println(min + " " + max);
     }
