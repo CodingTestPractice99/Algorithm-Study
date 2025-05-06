@@ -20,6 +20,8 @@ public class _30793 {
             System.out.println("normal");
         } else if (answer >= 0.4 && answer < 0.6) {
             System.out.println("strong");
+        } else {
+            System.out.println("very strong");
         }
     }
 }
