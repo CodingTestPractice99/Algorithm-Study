@@ -11,7 +11,6 @@ public class _30793 {
         String s[] = br.readLine().split(" ");
         int a = Integer.parseInt(s[0]);
         int b = Integer.parseInt(s[1]);
-
         double answer = (double) a / b;
 
         if (answer < 0.2) {
