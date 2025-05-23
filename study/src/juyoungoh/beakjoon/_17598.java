@@ -8,7 +8,6 @@ public class _17598 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         int lion = 0;
         int tiger = 0;
 
