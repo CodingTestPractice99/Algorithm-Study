@@ -21,8 +21,10 @@ public class _25828 {
 
         if (sum1 < sum3) {
             System.out.println(1);
-        } else {
+        } else if (sum1 > sum3) {
             System.out.println(2);
+        } else {
+            System.out.println(0);
         }
     }
 }
