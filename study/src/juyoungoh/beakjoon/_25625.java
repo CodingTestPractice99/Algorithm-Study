@@ -13,7 +13,7 @@ public class _25625 {
 
         int n = Integer.parseInt(s[0]);
         int m = Integer.parseInt(s[1]);
-
+    
         if (n > m) {
             System.out.println(n + m);
         } else if (n < m) {
