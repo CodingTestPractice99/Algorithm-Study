@@ -11,7 +11,6 @@ public class _1158 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         String arr[] = br.readLine().split(" ");
 
         int n = Integer.parseInt(arr[0]);
